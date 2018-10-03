@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+     <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+    <style type="text/css">
+        @font-face{
+            font-family:苹方;
+            src: url(fonts/ping.ttf);
+        }
+        *{
+        	margin: 0;
+        	padding: 0;
+            font-family: "苹方";
+        }
+        .mui-pull-left{
+            float: left;
+            color: #fff;
+            font-size: 1rem;
+            line-height: 2.8rem;
+        }
+        .headerimg img{
+            width: 1.471rem;
+            height: 1.471rem;
+        }
+        #swipercontainer1{
+           height:10rem!important;
+        }
+        .sliderimg{
+            height:10rem;
+            height:auto;
+            width: 100%;
+        }
+        .swiper-pagination-bullet{
+            background: rgb(255,255,255);
+            opacity:1
+        }
+        .swiper-pagination-bullet-active{
+            background: rgb(206,0,0);
+        }
+        .six-swiper-content{
+            padding:1.5625rem 0.25rem ;
+            overflow: hidden;
+            border: 1px solid rgb(232,232,232);
+        }
+        .six-slide{
+            width:5rem!important;
+        }
+        .sixitem{
+            text-align: center;
+            height:5rem;
+            width:5rem!important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+        }
+         .sixitemp{
+        	padding-left:0.125rem;
+        	padding-right:0.125rem;
+        }
+        .siximg{
+            height: 3.125rem!important;
+            width: 3.125rem!important;
+        }
+        .six-swiper-title, .newsflash-title{
+            color: #333333;
+            font-size: 0.875rem;
+            line-height: 1;
+        }
+        .six-swiper-title{
+        	padding-top:0.8125rem;
+        	
+        	
+        }
+        .newsflash-title{
+            font-family: "苹方粗体";
+        }
+        .nomsg{
+            font-size: 0.875rem;
+            color: rgb(102,102,102);
+            font-family: "苹方粗体";
+            padding: 0.938rem 0;
+            text-align: center;
+            line-height:1;
+        }
+        .redcar{
+            border-bottom: 0.68rem solid#f7f7f7;
+            padding-top: 0.813rem;
+        }
+        .redcar-top{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 0.706rem;
+        }
+        .redcar-title{
+            font-size: 1rem;
+            color: rgb(51,51,51);
+            font-family: "苹方粗体";
+            line-height:2 ;
+        }
+        .redcarimg{
+            margin-right: 0.471rem;
+        }
+        .redcarimg img{
+        	display: block;
+            width: 1.125rem;
+            height: 1.125rem;
+        }
+        .redcar-content{
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 0.188rem;
+            margin-bottom:0.969rem;
+           /* padding: 0 0.705rem;
+*/
+        }
+        .redcar-content-item{
+        	flex: 20%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+        }
+        .redcar-content-item img{
+        	display: block;
+        	width: 100%;
+            /*width: 6.876rem;
+            height: 4.530rem;*/
+        }
+
+        .redcar-content-item .item-title{
+            color: #333333;
+            font-size: 0.746rem;
+            margin-top:0.594rem;
+        }
+        #swipercontainer3{
+            height:4.412rem!important;
+            border-bottom: 0.68rem solid#f7f7f7;
+        }
+        .newflash-wrapper{
+            height: 4.412rem!important;
+        }
+        .news-swiper-item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1.412rem;
+        }
+     
+        .newsflash-time{
+            color:rgb(102,102,102);
+            font-size: 0.688rem;
+        }
+        .zx {
+            background: url(img/index.png)no-repeat;
+            width: 1.235rem;
+            height: 0.97rem;
+            display: block;
+            background-size: 1.235rem 0.97rem;
+            margin: 0 auto;
+        }
+        .zx1 {
+            background: url(img/indexchecked.png)no-repeat;
+            width: 1.235rem;
+            height: 0.97rem;
+            display: block;
+            background-size: 1.235rem 0.97rem;
+            margin: 0 auto;
+        }
+
+        .starts {
+            background: url(img/study.png)no-repeat;
+            width: 1.0588rem;
+            height: 0.97rem;
+            display: block;
+            background-size: 1.0588rem 0.97rem;
+            margin: 0 auto;
+        }
+        .starts1 {
+            background: url(img/xuanstudy.png))no-repeat;
+            width: 1.0588rem;
+            height: 0.97rem;
+            display: block;
+            background-size: 1.0588rem 0.97rem;
+            margin: 0 auto;
+        }
+        .hudong {
+            background: url(img/interact.png)no-repeat;
+            width: 1.0588rem;
+            height: 0.97rem;
+            display: block;
+            background-size: 1.0588rem 0.97rem;
+            margin: 0 auto;
+        }
+        .hudong1 {
+            background: url(img/interactchecked.png)no-repeat;
+            width: 1.0588rem;
+            height: 0.97rem;
+            display: block;
+            background-size: 1.0588rem 0.97rem;
+            margin: 0 auto;
+        }
+        .manage {
+            background: url(img/manage.png)no-repeat;
+            width: 0.97rem;
+            height: 0.97rem;
+            display: block;
+            background-size: 0.97rem 0.97rem;
+            margin: 0 auto;
+        }
+        .manage1 {
+            background: url(img/checked.png)no-repeat;
+            width: 0.97rem;
+            height: 0.97rem;
+            display: block;
+            background-size: 0.97rem 0.97rem;
+            margin: 0 auto;
+        }
+        .main {
+            background: url(img/me.png)no-repeat;
+            width: 0.97rem;
+            height: 0.97rem;
+            display: block;
+            background-size: 0.97rem 0.97rem;
+            margin: 0 auto;
+        }
+        .main1 {
+            background: url(img/mechexked.png)no-repeat;
+            width: 0.97rem;
+            height: 0.97rem;
+            display: block;
+            background-size: 0.97rem 0.97rem;
+            margin: 0 auto;
+        }
+        .spirit-item{
+            display: flex;
+            justify-content: space-between;
+            margin:0 0.706rem;
+            padding:0.938rem 0 ;
+            border-bottom:1px solid #E8E8E8;
+        }
+        .spirit-itemimg{
+            flex: 33%;
+        }
+        .spirit-itemimg img{
+        	display: block;
+        	width: 100%;
+        	height:100%;
+        	border-radius:0.25rem;
+        }
+        .spirit-item-content{
+            flex: 67%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 0.735rem;
+        }
+        .spirit-title{
+            font-size:1rem;
+             font-family: "苹方粗体";
+             line-height: 1.5;
+            /*font-weight:500;*/
+        }
+        .spirit-content{
+            font-size: 0.813rem;
+            color: #666666;
+            line-height: 1.375rem;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space:nowrap;
+			width:11.4706rem;
+        }
+        .spirit-icon{
+        	padding-top: 0.25rem;
+        }
+          .spirit-icon2{
+            margin-left:1.6rem ;
+        }
+        .spirit-icon1 img{
+            width: 0.6255rem !important;
+            height:0.6255rem ;
+        }
+         .spirit-icon2 img{
+            width: 0.781rem !important;
+            height:0.531rem;
+        }
+        .timeeyes{
+            color: #999999;
+            font-size: 0.687rem;
+            padding-left: 0.313rem;
+            line-height: 1;
+        }
+        .mui-tab-label {
+            margin-top: 0.1rem;
+            display: block;
+            font-size: 0.705rem;
+        }
+        .mui-bar-tab {
+            background-color: #fff;
+            height: 3rem !important;
+        }
+        .mui-bar {
+            box-shadow: #efeeee  1px 4px 10px 5px!important;
+            height: 3rem!important;
+        }
+        .newflash-wrapper{
+            height: 4.412rem!important;
+        }
+        .news-swiper-item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:0.4688rem 1.412rem;
+        }
+        .news-swiper-img{
+        	 padding:0.0625rem 0;
+        	 border-right: 1px solid rgb(232,232,232);
+        	 padding-right: 0.471rem;
+        }
+        .news-swiper-img img{
+             width:2.344rem;
+             height: 1.188rem;   
+        }
+        .mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item {
+            border: 0;
+        }
+
+        .mui-slider-indicator.mui-segmented-control {
+            background-color: #efeff4;
+        }
+
+        .mui-fullscreen.mui-slider .mui-slider-item>a {
+            top: 0;
+            -webkit-transform: none;
+            transform: none;
+        }
+        .mui-title {
+            margin: auto!important;
+            width: 200px!important;
+            /*white-space: normal!important;*/
+        }
+        .news_header {
+            text-align: center;
+        }
+        .clear:after {
+            display: block;
+            clear: both;
+            content: "";
+            visibility: hidden;
+            height: 0
+        }
+        .mui-segmented-control.mui-scroll-wrapper .mui-scroll {
+            height: 2.235rem;
+            position: relative;
+        }
+        .mui-control-item {
+            line-height: 2.235rem;
+            position: relative;
+            color: #333333;
+            font-size: 0.875rem;
+            font-family: "苹方粗体";
+        }
+        .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+            color: rgb(206,0,0)!important;
+            font-size: 0.875rem;
+            background: 0 0;
+        }
+        .mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active:after {
+            content: '';
+            height: 0.094rem;
+            /*width: 2.9rem;*/
+            width: 1.75rem;
+            background: rgb(206,0,0);
+            display: block;
+            position: absolute;
+            /*top: 1.9rem;*/
+            bottom: 0rem;
+            left: 50%;
+            margin-left: -1.55rem;
+        }
+        .news_list>ul>div:after {
+            height: 0;
+        }
+        .mui-slider-indicator.mui-segmented-control {
+            background-color: #efeff4;
+        }
+
+        .news_list_item>img {
+            height: 5rem;
+            border-radius: 0.058rem;
+        }
+        .mui-col-xs-6{
+            width: 18.3%;
+            /*margin-left:0.706rem ;*/
+        }
+        @media only screen and (min-width:756px ) {
+    		 #swipercontainer1{
+           height:20rem!important;
+        }
+        .sliderimg{
+            height:20rem;
+            width: 100%;
+        }	
+    	}
+    </style>
+
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+    <span class=" headerimg mui-pull-left"><img src="img/hseacher.png"/></span>
+    <h1 class="mui-title">示范党委</h1>
+    <span class="mui-pull-right headerimg"><img src="img/sao.png"/></span>
+</header>
+<div class="mui-content">
+    <div id="swipercontainer1" class="swiper-container swipercontainer1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/red1.jpg" class="sliderimg"/></div>
+            <div class="swiper-slide"><img src="img/red1.jpg" class="sliderimg"/></div>
+            <div class="swiper-slide"><img src="img/red3.jpg" class="sliderimg"/></div>
+            <div class="swiper-slide"><img src="img/red4.jpg" class="sliderimg"/></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="six-swiper-content swiper-container" id="swipercontainer2" >
+        <div class="swiper-wrapper six-wrapper">
+            <div class="swiper-slide six-slide">
+                <div class="mui-slider-item sixitem" style="padding-right:0.125rem ;">
+                    <img src="img/inform.png" class="siximg"/>
+                    <div class="six-swiper-title">通知公告</div>
+                </div>
+            </div>
+            <div class="swiper-slide six-slide">
+                <div class="mui-slider-item sixitem sixitemp">
+                    <img src="img/threeclass.png" class="siximg"/>
+                    <div class="six-swiper-title">三会一课</div>
+                </div>
+            </div>
+            <div class="swiper-slide six-slide sixitemp">
+                <div class="mui-slider-item sixitem">
+                    <img src="img/dangfei.png" class="siximg"/>
+                    <div class="six-swiper-title">党费缴纳</div>
+                </div>
+            </div>
+            <div class="swiper-slide six-slide sixitemp">
+                <div class="mui-slider-item sixitem">
+                    <img src="img/develop.png" class="siximg"/>
+                    <div class="six-swiper-title">党员发展</div>
+                </div>
+            </div>
+            <div class="swiper-slide six-slide sixitemp">
+                <div class="mui-slider-item sixitem">
+                    <img src="img/open.png" class="siximg"/>
+                    <div class="six-swiper-title">党务公开</div>
+                </div>
+            </div>
+            <div class="swiper-slide six-slide">
+                <div class="mui-slider-item sixitem"style="padding-left:0.125rem ;">
+                    <img src="img/assess.png" class="siximg"/>
+                    <div class="six-swiper-title" >考核</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="newsflash ">
+        <div class="swiper-container"id="swipercontainer3">
+            <div class="swiper-wrapper newflash-wrapper">
+                <div class="swiper-slide news-swiper-item">
+                    <div>
+                        <span class="news-swiper-img"><img src="img/newsflash .png"/></span>
+                        <span class="newsflash-title">整备当选四川省妇联主席</span>
+                    </div>
+                    <div class="newsflash-time">
+                        2018-09-10
+                    </div>
+                </div>
+                <div class="swiper-slide news-swiper-item">
+                    <div>
+                        <span class="news-swiper-img"><img src="img/newsflash .png"/></span>
+                        <span class="newsflash-title">比较接近付付付付或</span>
+                    </div>
+                    <div class="newsflash-time">
+                        2018-09-10
+                    </div>
+                </div>
+                <div class="swiper-slide news-swiper-item">
+                    <div>
+                        <span class="news-swiper-img"><img src="img/newsflash .png"/></span>
+                        <span class="newsflash-title">嘎嘎嘎嘎嘎过过过过过</span>
+                    </div>
+                    <div class="newsflash-time">
+                        2018-09-10
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="redcar">
+        <div class="redcar-top">
+            <div class="redcarimg"><img src="img/redcar.png"/></div>
+            <div class="redcar-title">红色直通车</div>
+        </div>
+        <div class="redcar-content">
+            <div class="redcar-content-item" style="margin-right: 2%; margin-left:3.2%;">
+                <img src="img/redone.png"/>
+                <div class="item-title">部领导接待日预约</div>
+            </div>
+            <div class="redcar-content-item" style="margin-right: 2%; ">
+                <img src="img/redcartwo.png"/>
+                <div class="item-title">联络保障需求</div>
+            </div>
+            <div class="redcar-content-item" style="margin-right: 3.2%; ">
+                <img src="img/redcarthree.png"/>
+                <div class="item-title">意见诉求</div>
+            </div>
+        </div>
+    </div>
+    <div class="news">
+        <div id="slider" class="mui-slider ">
+            <div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" style="background: white;border-bottom:1px solid#E8E8E8">
+                <div class="mui-scroll " id="nav_fun" style="background: #FFFFFF;border-top: none;margin-left:0.75rem;">
+                    <a  class="mui-control-item mui-active myselect nav-item-title" href="#spirit" style="color: #333333;line-height: 1rem;display: inline-block;padding:1.063rem  0;padding-right:1.25rem;">十九大精神</a>
+                    <a  class="mui-control-item nav-item-title" href="#currentevents" style="color: #333333;line-height: 1;display: inline-block;padding:1.063rem  0;padding-right:1.25rem;">时事政策</a>
+                    <a  class="mui-control-item nav-item-title" href="#importantnew" style="color: #333333;line-height: 1;display: inline-block;padding:1.063rem  0;padding-right:1.25rem;">党建要闻</a>
+                    <a  class="mui-control-item nav-item-title" href="#mien" style="color: #333333;line-height: 1;display: inline-block;padding:1.063rem  0;padding-right:1.25rem;">支部风采</a>
+                    <a  class="mui-control-item nav-item-title" href="#example" style="color: #333333;line-height: 1;display: inline-block;padding:1.063rem  0;padding-right:1.25rem;">先锋榜样</a>
+                    <a  class="mui-control-item nav-item-title" href="#read" style="color: #333333;line-height: 1;display: inline-block;padding:1.063rem  0;padding-right:1.25rem;">党员阅读</a>
+                    <a  class="mui-control-item nav-item-title" href="#histories" style="color: #333333;line-height: 1;display: inline-block;padding:1.063rem  0;padding-right:1.25rem;">党史一叶</a>
+                </div>
+            </div>
+            <div class="mui-slider-group">
+                <div id="spirit" class="mui-slider-item mui-control-content mui-active" style="margin-top: 0.313rem;">
+                    <div class="spirit-news-list" style="border-bottom: 0.6255rem solid rgb(247,247,247);">
+                    	<div class="spirit-item">
+	                    	<div class="spirit-itemimg">
+	                            <img src="img/red1.jpg"/>
+	                        </div>
+	                        <div class="spirit-item-content">
+	                            <div class="spirit-title">大力弘扬唯实求真精神</div>
+	                            <div class="spirit-content">内容提要：党的十八大以来内容提要：党的十八大以来</div>
+	                            <div class="spirit-icon">
+	                                <span class="spirit-icon1"><img src="img/time.png"/><span class="timeeyes">09-20</span></span>
+	                                <span class="spirit-icon2"><img src="img/eays.png" class="eaysimg"/><span class="timeeyes">10</span></span>
+								</div>
+	                        </div>
+	                    </div>
+	                    <div class="spirit-item">
+	                        <div class="spirit-itemimg">
+	                            <img src="img/red1.jpg"/>
+	                        </div>
+	                        <div class="spirit-item-content">
+	                            <div class="spirit-title">大力弘扬唯实求真精神</div>
+	                            <div class="spirit-content">内容提要：党的十八大以来,</div>
+	                            <div class="spirit-icon">
+	                                <span class="spirit-icon1"><img src="img/time.png"/><span class="timeeyes">09-20</span></span>
+	                                <span class="spirit-icon2"><img src="img/eays.png" class="eaysimg"/><span class="timeeyes">10</span></span>
+								</div>
+	                        </div>
+                    </div>
+	                    <div class="spirit-item">
+	                        <div class="spirit-itemimg">
+	                            <img src="img/red1.jpg"/>
+	                        </div>
+	                        <div class="spirit-item-content">
+	                            <div class="spirit-title">大力弘扬唯实求真精神</div>
+	                            <div class="spirit-content">内容提党的十八大以来,....</div>
+	                            <div class="spirit-icon">
+	                                <span class="spirit-icon1"><img src="img/time.png"/><span class="timeeyes">09-20</span></span>
+	                                <span class="spirit-icon2"><img src="img/eays.png" class="eaysimg"/><span class="timeeyes">10</span></span>
+								</div>
+	                        </div>
+	                    </div>
+                    </div>
+                    
+                  <div class="nomsg" style="width:100%;height:6rem;text-align:center;color: rgb(102,102,102);">没有更多数据了</div>    
+                </div> 
+                    
+                    
+                
+                <div id="currentevents" class="mui-slider-item mui-control-content">
+                    2
+                </div>
+                <div id="importantnew" class="mui-slider-item mui-control-content">
+                    3
+                </div>
+                <div id="mien" class="mui-slider-item mui-control-content">
+                    3
+                </div>
+                <div id="example" class="mui-slider-item mui-control-content">
+                    5
+                </div>
+                <div id="read" class="mui-slider-item mui-control-content">
+                    6
+                </div>
+                <div id="histories" class="mui-slider-item mui-control-content">
+                    7
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="mui-bar mui-bar-tab ying" >
+    <a  class="mui-tab-item mui-active total" data-id="0" href="">
+        <span class="zx  scrt mui-hidden"></span>
+        <span class="zx1 reds "></span>
+        <span class="mui-tab-label ">首页</span>
+    </a>
+    <a  class="mui-tab-item" data-id="1" href="">
+        <span class="starts scrt"></span>
+        <span class="starts1 mui-hidden reds"></span>
+        <span class="mui-tab-label">学习</span>
+    </a>
+    <a  class="mui-tab-item" data-id="1" href="">
+        <span class="hudong scrt"></span>
+        <span class="hudong1 mui-hidden reds"></span>
+        <span class="mui-tab-label">互动</span>
+    </a>
+    <a class="mui-tab-item" data-id="4" href="">
+        <span class="manage scrt"></span>
+        <span class="manage1 mui-hidden reds"></span>
+        <span class="mui-tab-label">管理</span>
+    </a>
+    <a class="mui-tab-item" data-id="4" href="">
+        <span class="main scrt"></span>
+        <span class="main1 mui-hidden reds"></span>
+        <span class="mui-tab-label">我的</span>
+    </a>
+</nav>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.min.js">
+
+</script>
+<script type="text/javascript">
+	function refresh() {
+				location.reload();
+			}
+		var ctime = 0;
+		mui.init();
+		mui.plusReady(function() {
+			var navFun = $('#nav_fun');
+				var user = osg.currentUser();
+				if(user) {
+					$("#headertitle").text(user.tenantName);
+				}
+				//侧滑模块
+				var navItemObj = $('#navItem');
+				navItemObj.attr("id", "");
+				navItemObj.remove();
+				var sliderContentObj = $("#spirit");
+				sliderContentObj.attr("id", "");
+				sliderContentObj.css("display", "");
+				sliderContentObj.remove();
+				//新闻list
+				var listItemObj = $('#listItem');
+				listItemObj.css('display', '');
+				listItemObj.attr('id', '');
+				listItemObj.remove();
+				// 无logo模板
+				var listItemNoLogoObj = $('#listItemNoLogo');
+				listItemNoLogoObj.css('display', '');
+				listItemNoLogoObj.attr('id', '');
+				listItemNoLogoObj.remove();
+				
+		})
+</script>
+<script type="text/javascript" charset="utf-8">
+    //	      	mui.init();
+    var mySwiper1 = new Swiper ('#swipercontainer1', {
+//			    direction: 'vertical',
+        loop: true,
+        autoplay: true,
+        pagination:{
+            el:".swiper-pagination",
+            clickable:true
+        }
+    })
+    var mySwiper2 = new Swiper ('#swipercontainer2', {
+//			    direction: 'vertical',
+//			    loop:true,
+//			    autoplay:true,
+        slidesPerView:'auto',
+        loopedSlides:6,
+    })
+    //轮播图3
+//  var mySwiper3 = new Swiper ('#swipercontainer3', {
+//      direction: 'vertical',
+//      loop: true,
+//      autoplay: true
+//  })
+
+</script>
+</body>
+</html>
